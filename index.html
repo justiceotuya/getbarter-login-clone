@@ -38,17 +38,18 @@
                     <input class="form-items form-input" type="text" name="lastName" placeholder="Last Name">
                     <input class="form-items form-input" type="email" name="email" placeholder="Email address">
                     <input class="form-items form-input" type="password" name="password" placeholder="Password">
-                    <select class="form-items form-input" name="country" id="country" placeholder="country"></select>
+                    <select class="select-country" name="country" id="country" placeholder="country"></select>
 
                     <div>
-                        <span>
-                            <select name="number-prefix" id="number-prefix">
-                                <input type="text" name="number" id="main-number" placeholder="8130764107">
-                            </select>
-                        </span>
+                        <div>
+                            <select class="select-country" name="number-prefix" id="number-prefix"></select>
+                        </div>
+                        <input type="number" name="number" class="form-items form-input" id="number-suffix" placeholder="8130764107">
                     </div>
 
-                    <input class="form-items" type="submit" value="Register Account">
+
+                    <button type="submit" class="btn">Register Account
+                        <img src="./img/long-arrow.svg" alt="long-arrow"> </button>
 
                 </form>
             </div>
@@ -57,7 +58,13 @@
                 <form action="#" method="post">
                     <input class="form-items form-input" type="text" name="email" id="email" placeholder="Email address">
                     <input class="form-items form-input" type="password" name="password" id="password" placeholder="password">
-                    <input class="form-items" type="submit" value="Log into Account">
+
+                    <a href="#">
+                        <button type="submit" class="btn">
+                            Log into account
+                            <img src="./img/long-arrow.svg" alt="long-arrow"> </button>
+                    </a>
+
                 </form>
             </div>
         </section>
@@ -67,11 +74,17 @@
                 You can sign in using your accounts on these sites:
             </p>
             <a href="#">
-                <input class="form-items" type="button" value="FACEBOOK">
+                <button type="submit" class="btn" id="f-book-btn">
+                    facebook
+                    <img src="./img/long-arrow.svg" alt="long-arrow"> </button>
             </a>
 
+
+
+
             <a href="#">
-                <input class="form-items" type="button" value="GOOGLE">
+                <button type="submit" class="btn" id="google-btn">Google
+                    <img src="./img/long-arrow.svg" alt="long-arrow"> </button>
             </a>
 
 

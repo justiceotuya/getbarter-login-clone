@@ -1,5 +1,8 @@
 body {
     width: 80%;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    color: rgba(0, 0, 0, .6);
 }
 
 main {
@@ -15,10 +18,10 @@ main {
         margin: 2%;
     }
     #social-login {
-        width: 44%;
+        width: 30%;
         display: inline-block;
         /* float: right; */
-        margin: 2%;
+        margin: 5.5%;
     }
 }
 
@@ -36,7 +39,7 @@ main {
 }
 
 .form-input:focus {
-    border-bottom: 1px solid #8D92B4;
+    border-bottom: 1px solid #3c52dd;
 }
 
 .show {
@@ -50,11 +53,23 @@ main {
 @media screen and (max-width:575px) {
     #social-login {
         margin-top: 10%;
+        width: 100%;
+        text-align: center;
+    }
+    .btn {
+        text-align: center;
+        width: 100% !important;
     }
 }
 
 a {
     text-decoration: none;
+}
+
+p,
+input::placeholder {
+    line-height: 30px;
+    font-size: 16px;
 }
 
 #register-link {
@@ -76,19 +91,34 @@ a {
     padding-bottom: 1em;
 }
 
-#login-link:hover {
-    border-bottom: 1px solid #3c52dd;
-    color: red;
-}
-
 #number-prefix {
-    /* display: inline; */
-    /* width: 20% */
-    /* padding: 20px; */
-    margin-top: 2em;
+    /* margin-top: 1em; */
     border: transparent;
     outline-color: transparent;
-    width: 20%;
+    width: 80px;
+}
+
+#number-suffix {
+    margin-top: -33px;
+    max-width: 85%;
+}
+
+select#country,
+#number-prefix {
+    color: rgba(0, 0, 0, .6);
+    font-size: 16px;
+}
+
+/* remove number input arrows */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input#number-suffix {
+    padding-left: 80px;
 }
 
 #main-number {
@@ -100,4 +130,45 @@ a {
     border: transparent;
     outline-color: transparent;
     width: 79%;
+}
+
+.btn {
+    width: 250px;
+    border-radius: 50px;
+    background: #3a4ce1;
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: .54px;
+    text-transform: uppercase;
+    margin-top: 1em;
+    padding: 17px 20px 10px 20px;
+    display: inline-block;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+#f-book-btn {
+    background-color: rgb(59, 89, 152) !important
+}
+
+#google-btn {
+    background-color: rgb(221, 75, 57) !important;
+}
+
+img {
+    display: inline;
+    float: right;
+    position: relative;
+    bottom: 5px;
+}
+
+.select-country {
+    border: transparent;
+    outline-color: transparent;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px 0;
+    margin-top: 2em;
+    background-color: #fff
 }
