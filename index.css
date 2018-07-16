@@ -1,0 +1,103 @@
+body {
+    width: 80%;
+}
+
+main {
+    width: 100%;
+    margin: 10%;
+}
+
+@media screen and (min-width:575px) {
+    #normal-login {
+        width: 48%;
+        /* display: inline-block; */
+        float: left;
+        margin: 2%;
+    }
+    #social-login {
+        width: 44%;
+        display: inline-block;
+        /* float: right; */
+        margin: 2%;
+    }
+}
+
+.form-items {
+    display: block;
+    padding: 10px 0;
+    margin-top: 2em;
+}
+
+.form-input {
+    border: transparent;
+    outline-color: transparent;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.form-input:focus {
+    border-bottom: 1px solid #8D92B4;
+}
+
+.show {
+    display: block;
+}
+
+.remove {
+    display: none;
+}
+
+@media screen and (max-width:575px) {
+    #social-login {
+        margin-top: 10%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+#register-link {
+    width: 44%;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    text-align: center;
+    display: inline-block;
+    color: #8D92B4;
+    margin-right: 10%;
+    padding-bottom: 1em;
+}
+
+#login-link {
+    width: 44%;
+    border-bottom: 1px solid #3c52dd;
+    text-align: center;
+    display: inline-block;
+    color: #8D92B4;
+    padding-bottom: 1em;
+}
+
+#login-link:hover {
+    border-bottom: 1px solid #3c52dd;
+    color: red;
+}
+
+#number-prefix {
+    /* display: inline; */
+    /* width: 20% */
+    /* padding: 20px; */
+    margin-top: 2em;
+    border: transparent;
+    outline-color: transparent;
+    width: 20%;
+}
+
+#main-number {
+    /* display: inline; */
+    /* width: 80%; */
+    /* display: block; */
+    padding: 20px;
+    margin-top: 2em;
+    border: transparent;
+    outline-color: transparent;
+    width: 79%;
+}
