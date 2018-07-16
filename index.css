@@ -172,3 +172,29 @@ img {
     margin-top: 2em;
     background-color: #fff
 }
+
+form {
+    opacity: .6;
+}
+
+#forgot-password {
+    display: block;
+    float: right;
+    font-size: 12px;
+    margin: 20px 0;
+    color: #3a4ce1;
+}
+
+#login-btn {
+    display: block;
+    margin: 40px 0px 20px 0px;
+}
+
+#login-btn:hover {
+    opacity: 1 !important;
+}
+
+#phone-login {
+    margin-left: 10px;
+    color: #3a4ce1;
+}
