@@ -33,25 +33,26 @@
 
 
             <div class="remove" id="register-form">
-                <form action="#">
-                    <input class="form-items form-input" type="text" name="firstName" placeholder="First Name">
-                    <input class="form-items form-input" type="text" name="lastName" placeholder="Last Name">
-                    <input class="form-items form-input" type="email" name="email" placeholder="Email address">
-                    <input class="form-items form-input" type="password" name="password" placeholder="Password">
-                    <select class="select-country" name="country" id="country" placeholder="country"></select>
+                <form action="#register-form">
+                    <input class="form-items form-input reg-input" type="text" name="firstName" placeholder="First Name" required>
+                    <input class="form-items form-input reg-input" type="text" name="lastName" placeholder="Last Name" required>
+                    <input class="form-items form-input reg-input" type="email" name="email" placeholder="Email address" required>
+                    <input class="form-items form-input reg-input" type="password" name="password" placeholder="Password" required>
+                    <select class="select-country reg-input" name="country" id="country" placeholder="country"></select>
 
                     <div>
                         <div>
-                            <select class="select-country" name="number-prefix" id="number-prefix"></select>
+                            <select class="select-country reg-input" name="number-prefix" id="number-prefix"></select>
                         </div>
-                        <input type="number" name="number" class="form-items form-input" id="number-suffix" placeholder="8130764107">
+                        <input type="number" name="number" class="form-items form-input reg-input" id="number-suffix" placeholder="8130764107">
                     </div>
 
 
-                    <button type="submit" class="btn">Register Account
-                        <img src="http://res.cloudinary.com/justiceotuya/image/upload/v1531754408/long-arrow.svg" alt="long-arrow"> </button>
-
+                    <button type="submit" class="btn" id="registerBtn">Register Account
+                        <img src="http://res.cloudinary.com/justiceotuya/image/upload/v1531754408/long-arrow.svg" alt="long-arrow">
+                    </button>
                 </form>
+
             </div>
 
             <div class="show" id="login-form">
