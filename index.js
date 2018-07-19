@@ -7,23 +7,10 @@ var loginForm = document.getElementById("login-form");
 var registerForm = document.getElementById("register-form");
 var registerBtn = document.getElementById("registerBtn");
 var regInput = document.getElementsByClassName("reg-input");
+var form = document.querySelector("form");
+
 
 //clcik on login link, displays login form and hides register form
-loginLink.addEventListener("click", function () {
-  if ((loginForm.className = "remove")) {
-    loginClickDisplay();
-  } else {
-    loginClickDisplay();
-  }
-});
-
-
-function loginClickDisplay() {
-  loginForm.className = "show";
-  registerForm.className = "remove";
-  loginLink.style.borderBottom = "1px solid #3c52dd";
-  registerLink.style.borderBottom = "1px solid rgba(0, 0, 0, .1)";
-}
 
 function registerClickDisplay() {
   registerForm.className = "show";
@@ -41,6 +28,28 @@ registerLink.addEventListener("click", function () {
     registerClickDisplay();
   }
 });
+
+
+
+
+
+
+loginLink.addEventListener("click", function () {
+  if ((loginForm.className = "remove")) {
+    loginClickDisplay();
+  } else {
+    loginClickDisplay();
+  }
+});
+
+
+function loginClickDisplay() {
+  loginForm.className = "show";
+  registerForm.className = "remove";
+  loginLink.style.borderBottom = "1px solid #3c52dd";
+  registerLink.style.borderBottom = "1px solid rgba(0, 0, 0, .1)";
+}
+
 
 //get country info data via the fetch api
 fetch(
@@ -66,21 +75,15 @@ fetch(
   });
 
 //click on register button to clear input text and shows an alert box
-registerBtn.addEventListener("click", function () {
 
-  for (var i = 0; i < regInput.length; i++) {
-    if (regInput[i].value == "") {
-      if (regInput[i].placeholder == "8130764107") {
-        regInput[i].placeholder = "Phone number";
-      }
-      alert("please fill in the value of " + regInput[i].placeholder);
-    } else {
-      setTimeout(() => {
-        alert(Registered);
-      }, 1000);
-    }
-  }
+// registerBtn.addEventListener("click", function () {
+//   setTimeout(() => {
+//     alert("Registered");
+//   }, 1000);
+// });
 
-
-
+form.addEventListener("submit", function () {
+  setTimeout(() => {
+    alert("Registered");
+  }, 1000);
 });

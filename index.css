@@ -82,17 +82,17 @@ input::placeholder {
 
 #register-link {
     width: 44%;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
     text-align: center;
     display: inline-block;
     color: #8D92B4;
     margin-right: 10%;
     padding-bottom: 1em;
+    border-bottom: 1px solid #3c52dd;
 }
 
 #login-link {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
     width: 44%;
-    border-bottom: 1px solid #3c52dd;
     text-align: center;
     display: inline-block;
     color: #8D92B4;
@@ -181,10 +181,6 @@ img {
     background-color: #fff
 }
 
-form {
-    opacity: .6;
-}
-
 #forgot-password {
     display: block;
     float: right;
@@ -207,7 +203,14 @@ form {
     color: #3a4ce1;
 }
 
-.btn:hover {
+button:hover {
     transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+button {
+    border: transparent;
+    opacity: 0.6;
     transition: 0.5s ease-in-out;
 }
