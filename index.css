@@ -206,3 +206,8 @@ form {
     margin-left: 10px;
     color: #3a4ce1;
 }
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}

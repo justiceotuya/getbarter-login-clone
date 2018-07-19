@@ -74,8 +74,10 @@ registerBtn.addEventListener("click", function () {
         regInput[i].placeholder = "Phone number";
       }
       alert("please fill in the value of " + regInput[i].placeholder);
-    } else if (regInput[i].value != "") {
-      alert("Registration completed");
+    } else {
+      setTimeout(() => {
+        alert(Registered);
+      }, 1000);
     }
   }
 
