@@ -1,27 +1,31 @@
 //loading the select box with data
-var country = document.getElementById("country");
-var number = document.getElementById("number-prefix");
-var loginLink = document.getElementById("login-link");
-var registerLink = document.getElementById("register-link");
-var loginForm = document.getElementById("login-form");
-var registerForm = document.getElementById("register-form");
-var registerBtn = document.getElementById("registerBtn");
-var regInput = document.getElementsByClassName("reg-input");
-var form = document.querySelector("form");
-
+let country = document.getElementById("country");
+let number = document.getElementById("number-prefix");
+let loginLink = document.getElementById("login-link");
+let registerLink = document.getElementById("register-link");
+let loginForm = document.getElementById("login-form");
+let registerForm = document.getElementById("register-form");
+let registerBtn = document.getElementById("registerBtn");
+let regInput = document.getElementsByClassName("reg-input");
+let form = document.querySelector("form");
 
 //clcik on login link, displays login form and hides register form
 
-function registerClickDisplay() {
+const registerClickDisplay = () => {
   registerForm.className = "show";
   loginForm.className = "remove";
   registerLink.style.borderBottom = "1px solid #3c52dd";
   loginLink.style.borderBottom = "1px solid rgba(0, 0, 0, .1)";
-}
+};
 
-
+const loginClickDisplay = () => {
+  loginForm.className = "show";
+  registerForm.className = "remove";
+  loginLink.style.borderBottom = "1px solid #3c52dd";
+  registerLink.style.borderBottom = "1px solid rgba(0, 0, 0, .1)";
+};
 //click on register link, shows register form and hides login form
-registerLink.addEventListener("click", function () {
+registerLink.addEventListener("click", function() {
   if ((registerForm.className = "remove")) {
     registerClickDisplay();
   } else {
@@ -29,12 +33,7 @@ registerLink.addEventListener("click", function () {
   }
 });
 
-
-
-
-
-
-loginLink.addEventListener("click", function () {
+loginLink.addEventListener("click", function() {
   if ((loginForm.className = "remove")) {
     loginClickDisplay();
   } else {
@@ -42,30 +41,19 @@ loginLink.addEventListener("click", function () {
   }
 });
 
-
-function loginClickDisplay() {
-  loginForm.className = "show";
-  registerForm.className = "remove";
-  loginLink.style.borderBottom = "1px solid #3c52dd";
-  registerLink.style.borderBottom = "1px solid rgba(0, 0, 0, .1)";
-}
-
-
 //get country info data via the fetch api
 fetch(
-    "https://gist.githubusercontent.com/DmytroLisitsyn/1c31186e5b66f1d6c52da6b5c70b12ad/raw/b08535cdbb5069583f7438cb878a81bf138ebd2b/country_dial_info.json"
-  )
-  .then(function (response) {
+  "https://gist.githubusercontent.com/DmytroLisitsyn/1c31186e5b66f1d6c52da6b5c70b12ad/raw/b08535cdbb5069583f7438cb878a81bf138ebd2b/country_dial_info.json"
+)
+  .then(function(response) {
     return response.json();
   })
-  .then(function (myJson) {
-    myJson.forEach(function (data) {
+  .then(function(myJson) {
+    myJson.forEach(function(data) {
       country.options[country.options.length] = new Option(
-        data.name, data.name
+        data.name,
+        data.name
       );
-
-      // country.push("<option value='" + data.name + "'>");
-
 
       number.options[number.options.length] = new Option(
         data.flag + data.dial_code,
@@ -74,15 +62,7 @@ fetch(
     });
   });
 
-//click on register button to clear input text and shows an alert box
-
-// registerBtn.addEventListener("click", function () {
-//   setTimeout(() => {
-//     alert("Registered");
-//   }, 1000);
-// });
-
-form.addEventListener("submit", function () {
+form.addEventListener("submit", function() {
   setTimeout(() => {
     alert("Registered");
   }, 1000);

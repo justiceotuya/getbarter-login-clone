@@ -130,9 +130,6 @@ input#number-suffix {
 }
 
 #main-number {
-    /* display: inline; */
-    /* width: 80%; */
-    /* display: block; */
     padding: 20px;
     margin-top: 2em;
     border: transparent;
