@@ -1,2 +1,2 @@
 # getbarter-login-clone
-A clone of the getbarter.co login/register page
+A clone of the website https://getbarter.co/auth/register
